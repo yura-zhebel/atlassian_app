@@ -1,6 +1,6 @@
 {
   "key": "jira-datetime-app",
-  "name": "Show dateTime",
+  "name": "Show date and time",
   "baseUrl": "https://atlassianapp-production.up.railway.app",
   "vendor": {
     "name": "YZX",
