@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 def send_file_with_headers(filename, mimetype=None):
     resp = make_response(send_from_directory('.', filename, mimetype=mimetype))
-    # Разрешаем встраивание в iframe (обязательно для Jira Cloud)
+    # Разрешаем встраивание в iframe Jira
     resp.headers['X-Frame-Options'] = 'ALLOWALL'
     resp.headers['Content-Security-Policy'] = "frame-ancestors *"
     return resp
@@ -19,7 +19,6 @@ def index():
 
 @app.route('/')
 def root():
-    # Перенаправляем корень на index.html (удобно для проверки)
     return send_file_with_headers('index.html', mimetype='text/html')
 
 @app.route('/status')
@@ -28,5 +27,5 @@ def status():
 
 if __name__ == "__main__":
     import os
-    port = int(os.environ.get("PORT", 8080))  # Railway передаёт PORT
+    port = int(os.environ.get("PORT", 8080))
     app.run(host="0.0.0.0", port=port)
