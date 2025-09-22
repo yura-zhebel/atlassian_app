@@ -1,9 +1,9 @@
 {
   "key": "jira-datetime-app",
-  "name": "Показ даты и времени",
-  "baseUrl": "https://your-app-url.com",
+  "name": "Show dateTime",
+  "baseUrl": "https://railway.com",
   "vendor": {
-    "name": "Your Name",
+    "name": "YZX",
     "url": "https://railway.com"
   },
   "authentication": {
@@ -15,7 +15,7 @@
         "key": "datetime-page",
         "location": "system.top.navigation.bar",
         "name": {
-          "value": "Дата и время"
+          "value": "Date and time"
         },
         "url": "/index.html"
       }
