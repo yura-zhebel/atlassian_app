@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Дата и время</title>
+</head>
+<body>
+    <h1>Приложение Jira: Дата и время</h1>
+    <button onclick="showDatetime()">Показать текущую дату и время</button>
+    <p id="datetime"></p>
+
+    <script>
+        function showDatetime() {
+            const now = new Date();
+            document.getElementById("datetime").innerText = now.toLocaleString();
+        }
+    </script>
+</body>
+</html>
