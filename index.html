@@ -5,14 +5,20 @@
 </head>
 <body>
     <h1>Jira APP: Date and Time</h1>
-    <button onclick="showDatetime()">Show date and time</button>
+    <button id="show-btn">Show date and time</button>
     <p id="datetime"></p>
 
     <script>
-        function showDatetime() {
+    // Ждём полной загрузки страницы и iframe
+    window.onload = function() {
+        const btn = document.getElementById("show-btn");
+        const output = document.getElementById("datetime");
+
+        btn.onclick = function() {
             const now = new Date();
-            document.getElementById("datetime").innerText = now.toLocaleString();
+            output.innerText = now.toLocaleString();
         }
+    }
     </script>
 </body>
 </html>
